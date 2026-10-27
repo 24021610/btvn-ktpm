@@ -1,5 +1,5 @@
-- **Họ và tên:** Trần Đức Quang  
-- **MSSV:** 24021610  
+# Họ và tên: Trần Đức Quang - 24021610
+
 
 ---
 
@@ -8,19 +8,19 @@
 Dựng WAF (Nginx + ModSecurity + OWASP CRS) làm Reverse Proxy bảo vệ ứng dụng dính lỗ hổng OWASP Juice Shop trước tấn công SQL Injection.
 
 - **Backend (Juice Shop):** Port `3000` (không có WAF).
-- **WAF (ModSecurity):** Port `8080` (lọc request an toàn rồi forward về port 3000).
+- **WAF (ModSecurity):** Port `8080` 
 
 ---
 
 ## 2. Quá trình kiểm thử
 
 ### Bước 1: Khởi tạo hệ thống
-Khởi chạy dịch vụ qua Docker Compose (`MODSEC_RULE_ENGINE: "On"`).
+Khởi chạy Docker Compose (`MODSEC_RULE_ENGINE: "On"`).
 
 ![Khởi tạo](khởi%20tạo.png)
 
 ### Bước 2: Không qua WAF - Port 3000
-- **Kết quả:** Đăng nhập bypass thành công vào tài khoản Admin.
+- **Kết quả:** Đăng nhập thành công vào tài khoản Admin.
 
 ![Không có WAF](không%20có%20waf.png)
 
